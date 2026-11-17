@@ -38,7 +38,6 @@ Malzemeyi zeminden ayırmak için **hibrit bir yöntem** kullanıyor: hızlı kl
 | Ne | Nasıl |
 |---|---|
 | Uygulama | `ReForm_MVP.html` dosyasını Chrome ya da Edge ile açın (testler Chrome’da yapıldı). Kurulum ve internet gerekmez. Dosya ~21 MB çünkü YZ modeli ve çalıştırıcısı içinde. |
-| Proje anlatımı | Sağ üstteki **Proje** düğmesi: problem, nasıl çalıştığı, YZ'nin rolü, sonuçlar, başarısız örnekler, gizlilik ve gelecek (6 sayfa). Ok tuşlarıyla gezilir. |
 | Fotoğraf yoksa | Açılış ekranında **"Fotoğrafın yok mu? Demo dene"** düğmesine basın (yapay demo malzemesi). |
 | Ayırma yöntemini seçmek | **Boyutları düzenle → Gelişmiş ayarlar → Malzemeyi ayırma yöntemi:** Otomatik (varsayılan) · Yalnız klasik · Her zaman YZ |
 | Klasik yöntem testi | `node tests/goruntu_isleme_testi.js --md TEST_SONUCLARI.md` (Node 18+, ek paket yok) |
