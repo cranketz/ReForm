@@ -6,6 +6,8 @@ ReForm, atölyede biriken düzensiz şekilli artık levhaları (kontrplak, MDF, 
 
 Malzemeyi zeminden ayırmak için **hibrit bir yöntem** kullanıyor: hızlı klasik görüntü işleme her zaman çalışıyor; sonuç şüpheliyse uygulamaya gömülü **YZ modeli (U²-Net)** devreye giriyor.
 
+**Canlı uygulama (kurulum gerekmez):** https://cranketz.github.io/ReForm/ · Kaynak: https://github.com/cranketz/ReForm
+
 > Uygulamalı Yapay Zeka ve Görüntü İşlemeye Giriş — proje sunumu (18 Kasım 2026)
 
 ---
