@@ -1,0 +1,490 @@
+[
+ {
+  "genel": {
+   "en_mm": 140.2,
+   "boy_mm": 110.0
+  },
+  "dosya": "01_kolay_koyu_zemin.jpg",
+  "baslik": "Koyu zemin, L biçimli kontrplak, hafif açı",
+  "beklenen": "Klasik yöntem bulmalı (1 parça).",
+  "zemin": "koyu",
+  "kose_piksel": [
+   [
+    420,
+    330
+   ],
+   [
+    1990,
+    360
+   ],
+   [
+    1960,
+    1420
+   ],
+   [
+    440,
+    1400
+   ]
+  ],
+  "parcalar": [
+   {
+    "ad": "L kontrplak",
+    "en_mm": 140.2,
+    "boy_mm": 110.0,
+    "alan_mm2": 10525,
+    "delik": ""
+   }
+  ],
+  "foto": {
+   "boyut": [
+    2400,
+    1800
+   ]
+  }
+ },
+ {
+  "genel": {
+   "en_mm": 173.2,
+   "boy_mm": 126.2
+  },
+  "dosya": "02_egik_cekim.jpg",
+  "baslik": "Güçlü eğik açıdan çekim (perspektif)",
+  "beklenen": "Köşeler seçilince ölçü düzelmeli (1 parça).",
+  "zemin": "koyu",
+  "kose_piksel": [
+   [
+    640,
+    420
+   ],
+   [
+    1830,
+    520
+   ],
+   [
+    2180,
+    1500
+   ],
+   [
+    210,
+    1380
+   ]
+  ],
+  "parcalar": [
+   {
+    "ad": "Kontrplak levha",
+    "en_mm": 173.2,
+    "boy_mm": 126.2,
+    "alan_mm2": 16824,
+    "delik": ""
+   }
+  ],
+  "foto": {
+   "boyut": [
+    2400,
+    1800
+   ],
+   "light": [
+    0.15,
+    0.1
+   ]
+  }
+ },
+ {
+  "genel": {
+   "en_mm": 240.2,
+   "boy_mm": 130.0
+  },
+  "dosya": "03_iki_mdf_yan_isik.jpg",
+  "baslik": "İki ayrı MDF parça, yandan gelen ışık",
+  "beklenen": "Klasik yöntem 2 parça bulmalı.",
+  "zemin": "koyu",
+  "kose_piksel": [
+   [
+    380,
+    300
+   ],
+   [
+    2020,
+    330
+   ],
+   [
+    2010,
+    1440
+   ],
+   [
+    390,
+    1420
+   ]
+  ],
+  "parcalar": [
+   {
+    "ad": "MDF A",
+    "en_mm": 110.2,
+    "boy_mm": 120.0,
+    "alan_mm2": 13200,
+    "delik": ""
+   },
+   {
+    "ad": "MDF B",
+    "en_mm": 100.2,
+    "boy_mm": 130.0,
+    "alan_mm2": 10188,
+    "delik": ""
+   }
+  ],
+  "foto": {
+   "boyut": [
+    2400,
+    1800
+   ],
+   "light": [
+    0.45,
+    0.05
+   ]
+  }
+ },
+ {
+  "genel": {
+   "en_mm": 220.2,
+   "boy_mm": 140.0
+  },
+  "dosya": "04_delikli_parca.jpg",
+  "baslik": "Kontrplakta yuvarlak ve dikdörtgen delik",
+  "beklenen": "Klasik yöntem 1 parça + 2 delik bulmalı.",
+  "zemin": "koyu",
+  "kose_piksel": [
+   [
+    410,
+    320
+   ],
+   [
+    2000,
+    345
+   ],
+   [
+    1985,
+    1430
+   ],
+   [
+    425,
+    1410
+   ]
+  ],
+  "parcalar": [
+   {
+    "ad": "Delikli kontrplak",
+    "en_mm": 220.2,
+    "boy_mm": 140.0,
+    "alan_mm2": 26602,
+    "delik": "Ø50 mm daire + 55 × 40 mm dikdörtgen"
+   }
+  ],
+  "foto": {
+   "boyut": [
+    2400,
+    1800
+   ]
+  }
+ },
+ {
+  "genel": {
+   "en_mm": 180.2,
+   "boy_mm": 125.0
+  },
+  "dosya": "05_beyaz_zemin_beyaz_karton.jpg",
+  "baslik": "Beyaz kağıt üzerinde beyaz karton",
+  "beklenen": "Klasik yöntem bulamaz → otomatik modda YZ devreye girmeli.",
+  "zemin": "beyaz",
+  "kose_piksel": [
+   [
+    430,
+    330
+   ],
+   [
+    1985,
+    350
+   ],
+   [
+    1975,
+    1420
+   ],
+   [
+    445,
+    1405
+   ]
+  ],
+  "parcalar": [
+   {
+    "ad": "Beyaz karton",
+    "en_mm": 180.2,
+    "boy_mm": 125.0,
+    "alan_mm2": 18434,
+    "delik": ""
+   }
+  ],
+  "foto": {
+   "boyut": [
+    2400,
+    1800
+   ]
+  }
+ },
+ {
+  "genel": {
+   "en_mm": 140.2,
+   "boy_mm": 100.0
+  },
+  "dosya": "06_kesim_mati.jpg",
+  "baslik": "Yeşil kareli kesim matı üzerinde kontrplak",
+  "beklenen": "Klasik yöntem çok parça bulur → otomatik modda YZ devreye girmeli.",
+  "zemin": "kesim_mati",
+  "kose_piksel": [
+   [
+    400,
+    320
+   ],
+   [
+    2000,
+    340
+   ],
+   [
+    1990,
+    1430
+   ],
+   [
+    410,
+    1415
+   ]
+  ],
+  "parcalar": [
+   {
+    "ad": "Kontrplak",
+    "en_mm": 140.2,
+    "boy_mm": 100.0,
+    "alan_mm2": 14000,
+    "delik": ""
+   }
+  ],
+  "foto": {
+   "boyut": [
+    2400,
+    1800
+   ]
+  }
+ },
+ {
+  "genel": {
+   "en_mm": 140.2,
+   "boy_mm": 100.0
+  },
+  "dosya": "07_acik_zemin_golge.jpg",
+  "baslik": "Açık gri zemin, sert gölge",
+  "beklenen": "Beklenen hata: gölge parçaya eklenir, ölçü büyük çıkar.",
+  "zemin": "acik_gri",
+  "kose_piksel": [
+   [
+    420,
+    330
+   ],
+   [
+    1990,
+    350
+   ],
+   [
+    1980,
+    1425
+   ],
+   [
+    435,
+    1410
+   ]
+  ],
+  "parcalar": [
+   {
+    "ad": "MDF",
+    "en_mm": 140.2,
+    "boy_mm": 100.0,
+    "alan_mm2": 14000,
+    "delik": ""
+   }
+  ],
+  "foto": {
+   "boyut": [
+    2400,
+    1800
+   ]
+  }
+ },
+ {
+  "genel": {
+   "en_mm": 220.2,
+   "boy_mm": 120.0
+  },
+  "dosya": "08_degen_parcalar.jpg",
+  "baslik": "Birbirine değen iki kontrplak parça",
+  "beklenen": "Beklenen hata: 2 parça yerine 1 parça bulunur.",
+  "zemin": "koyu",
+  "kose_piksel": [
+   [
+    415,
+    325
+   ],
+   [
+    1995,
+    345
+   ],
+   [
+    1985,
+    1425
+   ],
+   [
+    430,
+    1410
+   ]
+  ],
+  "parcalar": [
+   {
+    "ad": "Kontrplak A",
+    "en_mm": 110.2,
+    "boy_mm": 120.0,
+    "alan_mm2": 13200,
+    "delik": ""
+   },
+   {
+    "ad": "Kontrplak B (A’ya değiyor)",
+    "en_mm": 110.2,
+    "boy_mm": 80.0,
+    "alan_mm2": 8800,
+    "delik": ""
+   }
+  ],
+  "foto": {
+   "boyut": [
+    2400,
+    1800
+   ]
+  }
+ },
+ {
+  "genel": {
+   "en_mm": 166.0,
+   "boy_mm": 97.0
+  },
+  "dosya": "09_kece_duzensiz.jpg",
+  "baslik": "Kırmızı keçe, düzensiz kenar, hafif bulanık",
+  "beklenen": "Klasik yöntem bulmalı (1 parça).",
+  "zemin": "koyu",
+  "kose_piksel": [
+   [
+    430,
+    330
+   ],
+   [
+    1985,
+    350
+   ],
+   [
+    1975,
+    1420
+   ],
+   [
+    440,
+    1405
+   ]
+  ],
+  "parcalar": [
+   {
+    "ad": "Kırmızı keçe",
+    "en_mm": 166.0,
+    "boy_mm": 97.0,
+    "alan_mm2": 10986,
+    "delik": ""
+   }
+  ],
+  "foto": {
+   "boyut": [
+    2400,
+    1800
+   ],
+   "blur": 1.6
+  }
+ },
+ {
+  "genel": {
+   "en_mm": 253.2,
+   "boy_mm": 154.0
+  },
+  "dosya": "10_kucuk_artiklar.jpg",
+  "baslik": "Altı küçük kontrplak artığı (biri 6 × 6 mm)",
+  "beklenen": "5 parça bulunmalı; 6 × 6 mm (36 mm²) parça 60 mm² sınırının altında kaldığı için atılmalı.",
+  "zemin": "koyu",
+  "kose_piksel": [
+   [
+    420,
+    325
+   ],
+   [
+    1990,
+    345
+   ],
+   [
+    1980,
+    1425
+   ],
+   [
+    435,
+    1410
+   ]
+  ],
+  "parcalar": [
+   {
+    "ad": "Artık 1",
+    "en_mm": 60.2,
+    "boy_mm": 45.0,
+    "alan_mm2": 2700,
+    "delik": ""
+   },
+   {
+    "ad": "Artık 2",
+    "en_mm": 35.2,
+    "boy_mm": 70.0,
+    "alan_mm2": 2450,
+    "delik": ""
+   },
+   {
+    "ad": "Artık 3",
+    "en_mm": 96.5,
+    "boy_mm": 58.0,
+    "alan_mm2": 3603,
+    "delik": ""
+   },
+   {
+    "ad": "Artık 4",
+    "en_mm": 80.2,
+    "boy_mm": 55.0,
+    "alan_mm2": 4400,
+    "delik": ""
+   },
+   {
+    "ad": "Artık 5",
+    "en_mm": 115.0,
+    "boy_mm": 65.0,
+    "alan_mm2": 5608,
+    "delik": ""
+   },
+   {
+    "ad": "Artık 6",
+    "en_mm": 6.2,
+    "boy_mm": 6.0,
+    "alan_mm2": 36,
+    "delik": ""
+   }
+  ],
+  "foto": {
+   "boyut": [
+    2400,
+    1800
+   ]
+  }
+ }
+]
