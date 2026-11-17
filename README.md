@@ -20,7 +20,6 @@ Malzemeyi zeminden ayırmak için **hibrit bir yöntem** kullanıyor: hızlı kl
 - **Problemin önemine kanıt:**
   - Mobilya üretiminde ham maddenin genellikle %10–20'si ahşap atığı olarak kayboluyor ([Gomes vd., Frontiers in Built Environment, 2025](https://www.frontiersin.org/articles/10.3389/fbuil.2025.1623281/full)).
   - ABD'de 2018'de evsel atığa 18,1 milyon ton ahşap karıştı; bunun 12,2 milyon tonu çöp sahasına gitti ([EPA, Wood: Material-Specific Data](https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/wood-material-specific-data)).
-  - _(İsteğe bağlı: kendi atölye gözleminiz veya küçük bir anket sonucu.)_
 
 ### Benzer çözümler ve fark
 
@@ -176,12 +175,11 @@ Ayrıntılar: [`TEST_SONUCLARI.md`](TEST_SONUCLARI.md) (klasik yöntem) ve [`HIB
   2. *Birbirine değen iki parça:* Tek parça sayılıyor. Parçalar arasında birkaç mm boşluk bırakılmalı.
 - **YZ kenar payı:** YZ maskesi kenarlarda ~1 mm taşabiliyor; YZ kullanıldığında uygulama "parça sınırlarını kontrol et" uyarısı veriyor.
 
-### Gerçek fotoğraf testi (sunumdan önce doldurun)
+### Gerçek fotoğraf testi (yapılmadı)
 
-Her fotoğraftaki parçanın enini ve boyunu cetvelle ölçün; uygulamanın "Ölçü kontrolü ve rapor → Ölçü doğrulama" bölümüyle karşılaştırın.
+Kullanıcıların telefonla çektiği gerçek fotoğraflarla sistematik bir ölçüm testi henüz yapılmadı. Testler, gerçek ölçüsü kesin bilinen yapay senaryolarla ve gerçekçi üretilmiş fotoğraflarla yapıldı. Planlanan test: A4 kağıt (297 × 210 mm) üzerinde banka kartı (standart ölçü 85,6 × 54 mm) ve cetvelle ölçülmüş artık parçalar; tepeden ve eğik açıdan, farklı ışık ve zeminlerde.
 
-| # | Malzeme | Zemin | Işık / açı | Gerçek en × boy (mm) | Ölçülen en × boy (mm) | Hata (mm / %) | Parça sayısı doğru mu? | Not |
-|---|---|---|---|---|---|---|---|---|
+---|---|---|---|---|---|---|---|---|
 | 1 | | | | | | | | |
 | 2 | | | | | | | | |
 | 3 | | | | | | | | |
@@ -198,6 +196,7 @@ Her fotoğraftaki parçanın enini ve boyunu cetvelle ölçün; uygulamanın "Ö
 ## 8. Sınırlılıklar
 
 - Klasik yöntem zeminin düz ve tek renkli olduğunu varsayıyor; desenli veya malzemeyle aynı renkteki zeminde YZ'ye geçiliyor, bu da ~2 sn bekleme ve kenarlarda ~1 mm taşma demek.
+- Testler yapay ve gerçekçi üretilmiş görüntülerle yapıldı; gerçek kullanıcı fotoğraflarıyla sistematik ölçüm testi henüz yok.
 - YZ modeli genel amaçlı; artık levha fotoğraflarıyla yeniden eğitilmedi. Kendi fotoğraflarımızdan etiketli bir veri seti toplanırsa model ince ayarla (fine-tuning) iyileştirilebilir.
 - Açık zemindeki gölgeleri ne klasik yöntem ne YZ ayırabiliyor; dağınık ışık veya koyu zemin önerilir.
 - Kullanıcının 4 köşeyi doğru seçmesi gerekiyor. Birkaç mm'lik köşe hatası artık parçayı kaybettirmiyor ama ölçüye yansıyor (300 mm'lik alanda 4 mm dışarıdan seçilen köşeler ölçüyü ~%2–3 küçültür).
