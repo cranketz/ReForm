@@ -53,6 +53,7 @@ ReForm/
 ├── TEST_SONUCLARI.md          Klasik yöntem testinin çıktısı
 ├── HIBRIT_TEST_SONUCLARI.md   Klasik / hibrit / YZ karşılaştırması (uygulamanın içinde ölçüldü)
 ├── YZ_KARSILASTIRMA.md        Klasik yöntem ile hazır U²-Net modelleri (rembg) karşılaştırması
+├── docs/akis.svg              Sistem akışı şeması
 └── tests/
     ├── goruntu_isleme_testi.js  HTML içindeki ReformVision modülünü doğrudan test eder
     ├── hibrit_testi.py          Uygulamayı Chrome'da açıp ReformAI (hibrit) yöntemini ölçer
@@ -67,24 +68,9 @@ test_fotograflari/
 
 ## 3. Sistem akışı
 
-```mermaid
-flowchart LR
-    A[Fotoğraf<br/>JPG/PNG/WebP] --> B[Küçültme<br/>en uzun kenar 1400 px]
-    B --> C[Kullanıcı 4 köşe seçer<br/>+ alanın gerçek ölçüsü]
-    C --> D[Perspektif düzeltme<br/>homografi → mm ölçekli düz görüntü]
-    D --> E[Klasik yöntem<br/>arka plan rengi + RGB/HSV eşiği<br/>~25 ms]
-    E --> Q{Sonuç şüpheli mi?<br/>parça yok · çok küçük parça<br/>· zemin görünmüyor}
-    Q -- hayır --> G
-    Q -- evet --> Y[YZ: U²-Net küçük model<br/>320×320 girdi → nesne maskesi<br/>~2 sn, tarayıcıda]
-    Y --> R[Delik kurtarma<br/>klasik maskedeki kapalı zemin<br/>bölgeleri YZ maskesinden çıkarılır]
-    R --> G[Bağlı bileşenler<br/>flood fill, < 60 mm² atılır]
-    G --> H[Sınır takibi<br/>dış kontur + delikler]
-    H --> I[Douglas-Peucker<br/>kontur sadeleştirme]
-    I --> J[mm cinsinden poligonlar]
-    J --> K[Yerleşim / nesting<br/>ürün parçaları artığa yerleştirilir]
-    K --> L[DXF · SVG · 3MF · rapor]
-    G -.-> W[Fotoğraf uyarıları<br/>sınır yok · kenara değiyor · çok parça · YZ kullanıldı]
-```
+![ReForm sistem akışı](docs/akis.svg)
+
+**Şüpheli** = hiç parça yok · zemin neredeyse görünmüyor · çok sayıda küçük parça · alanı ağ gibi kaplayan desen (kesim matı). Bu durumda YZ devreye girer; delikler klasik sonuçtan geri alınır.
 
 Kodda klasik görüntü işleme `ReformVision` modülünde (HTML içindeki ilk büyük `<script>` bloğu):
 
