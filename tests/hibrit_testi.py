@@ -13,6 +13,7 @@ Kurulum (bir kez):
 
 Çalıştırma:
     python tests/hibrit_testi.py tests/senaryolar --md HIBRIT_TEST_SONUCLARI.md
+    python tests/hibrit_testi.py tests/senaryolar --maske-kaydet      (görseller için maskeleri de kaydeder)
     (Bilgisayardaki Chrome'u kullanmak için: --chrome "C:/Program Files/Google/Chrome/Application/chrome.exe")
 """
 import argparse
@@ -46,7 +47,7 @@ async ({png, w, h, mode}) => {
 """
 
 
-async def main(folder, html, md, chrome):
+async def main(folder, html, md, chrome, save_masks=False):
     from playwright.async_api import async_playwright
     reform = json.load(open(os.path.join(folder, 'reform_sonuclar.json'), encoding='utf-8'))
     async with async_playwright() as p:
@@ -73,6 +74,8 @@ async def main(folder, html, md, chrome):
                 union = np.logical_or(pred, truth).sum()
                 iou = 1.0 if union == 0 else np.logical_and(pred, truth).sum() / union
                 row[mode] = {**res, 'iou': float(iou), 'ok': bool(iou >= 0.95 and res['found'] == r['parts'])}
+                if save_masks and mode == 'auto':
+                    Image.fromarray((pred * 255).astype('uint8')).save(os.path.join(folder, r['id'] + '_hibrit_maske.png'))
             rows.append(row)
             print(r['id'], r['name'], {m: (round(row[m]['iou'], 3), row[m]['found']) for m, _ in MODES})
         await browser.close()
@@ -105,5 +108,6 @@ if __name__ == '__main__':
     ap.add_argument('--html', default=str(pathlib.Path(__file__).resolve().parent.parent / 'ReForm_MVP.html'))
     ap.add_argument('--md', help='Sonuç tablosunun yazılacağı Markdown dosyası')
     ap.add_argument('--chrome', help='Chrome / Chromium çalıştırılabilir dosyasının yolu (isteğe bağlı)')
+    ap.add_argument('--maske-kaydet', action='store_true', help='Otomatik (hibrit) modun maskelerini senaryo klasörüne kaydet')
     a = ap.parse_args()
-    asyncio.run(main(a.klasor, a.html, a.md, a.chrome))
+    asyncio.run(main(a.klasor, a.html, a.md, a.chrome, a.maske_kaydet))

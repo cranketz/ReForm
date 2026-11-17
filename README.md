@@ -53,12 +53,14 @@ ReForm/
 ├── TEST_SONUCLARI.md          Klasik yöntem testinin çıktısı
 ├── HIBRIT_TEST_SONUCLARI.md   Klasik / hibrit / YZ karşılaştırması (uygulamanın içinde ölçüldü)
 ├── YZ_KARSILASTIRMA.md        Klasik yöntem ile hazır U²-Net modelleri (rembg) karşılaştırması
-├── docs/akis.svg              Sistem akışı şeması
+├── docs/                      Akış şeması ve test özeti görseli
+├── test_senaryolari/          17 test senaryosunun görselleri (görüntü · klasik · hibrit)
 └── tests/
     ├── goruntu_isleme_testi.js  HTML içindeki ReformVision modülünü doğrudan test eder
     ├── hibrit_testi.py          Uygulamayı Chrome'da açıp ReformAI (hibrit) yöntemini ölçer
     ├── yz_karsilastirma.py      Aynı senaryoları rembg (U²-Net) ile çalıştırır
-    └── test_fotografi_uret.py   Gerçekçi, ölçüsü bilinen test fotoğraflarını üretir
+    ├── test_fotografi_uret.py   Gerçekçi, ölçüsü bilinen test fotoğraflarını üretir
+    └── senaryo_gorselleri.py    17 senaryonun görsellerini üretir
 test_fotograflari/
 ├── 01…10_*.jpg                Gerçekçi test fotoğrafları (300 × 200 mm pano üzerinde)
 └── CEVAP_ANAHTARI.md          Gerçek ölçüler ve uygulamanın sonuçları
@@ -154,6 +156,10 @@ YZ bölümü `ReformAI` modülünde (ana uygulama kodundan hemen önceki `<scrip
 ---
 
 ## 6. Test sonuçları
+
+![17 test senaryosu](docs/test_senaryolari.png)
+
+Her senaryonun test görüntüsü, klasik ve hibrit sonucu yan yana: [`test_senaryolari/`](test_senaryolari) (yeşil: doğru bulunan, kırmızı: yanlışlıkla malzeme sanılan, mavi: kaçırılan).
 
 Ayrıntılar: [`TEST_SONUCLARI.md`](TEST_SONUCLARI.md) (klasik yöntem) ve [`HIBRIT_TEST_SONUCLARI.md`](HIBRIT_TEST_SONUCLARI.md) (uygulamanın içinde klasik / hibrit / YZ). Testler uygulamadaki kodun kendisini çalıştırır.
 
