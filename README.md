@@ -38,7 +38,7 @@ Malzemeyi zeminden ayırmak için **hibrit bir yöntem** kullanıyor: hızlı kl
 |---|---|
 | Uygulama | `ReForm_MVP.html` dosyasını Chrome ya da Edge ile açın (testler Chrome’da yapıldı). Kurulum ve internet gerekmez. Dosya ~21 MB çünkü YZ modeli ve çalıştırıcısı içinde. |
 | Fotoğraf yoksa | Açılış ekranında **"Fotoğrafın yok mu? Demo dene"** düğmesine basın (yapay demo malzemesi). |
-| Ayırma yöntemini seçmek | **Boyutları düzenle → Gelişmiş ayarlar → Malzemeyi ayırma yöntemi:** Otomatik (varsayılan) · Yalnız klasik · Her zaman YZ |
+| Ayırma yöntemini seçmek | **Malzemeni ekle → Fotoğraf ayarları → Malzemeyi ayırma yöntemi:** Otomatik (varsayılan) · Yalnız klasik · Her zaman YZ |
 | Klasik yöntem testi | `node tests/goruntu_isleme_testi.js --md TEST_SONUCLARI.md` (Node 18+, ek paket yok) |
 | Hibrit (uygulama içi YZ) testi | `pip install playwright pillow numpy` → `playwright install chromium` → `node tests/goruntu_isleme_testi.js --export tests/senaryolar` → `python tests/hibrit_testi.py tests/senaryolar --md HIBRIT_TEST_SONUCLARI.md` |
 | Hazır model karşılaştırması | `pip install "rembg[cpu]" pillow numpy` → `python tests/yz_karsilastirma.py tests/senaryolar --md YZ_KARSILASTIRMA.md` |
