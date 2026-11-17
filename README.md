@@ -145,7 +145,6 @@ YZ bölümü `ReformAI` modülünde (ana uygulama kodundan hemen önceki `<scrip
 | Ton toleransı | 18° (zemin doygunluğu > 0,25 ise) | Renkli zeminde gölge parlaklığı değiştirir ama tonu değiştirmez; gölgenin malzeme sanılmasını önler. |
 | En küçük parça | 60 mm² (~8 × 8 mm) | Bundan küçük bir artıktan anlamlı bir parça kesilemez; toz, leke ve gürültüyü temizler. |
 | Kontur sadeleştirme | 0,6 piksel (≈ 0,2 mm) | Kesim dosyasını küçültür; hata kesim payının altında kalır. |
-| Ölçü doğrulama sınırı | %3 | İkinci bir bilinen mesafeyle ölçek kontrolü; telefon lensi bozulması ve köşe seçme hatasına pay bırakır. |
 | YZ modeli | u2netp (4,6 MB) | Büyük model (176 MB) testlerde daha başarılı değildi, ~2,4 kat yavaştı ve tek dosyaya gömülemeyecek kadar büyük. |
 | YZ girdi boyutu | 320 × 320 | Modelin eğitildiği boyut. Ön işleme (en parlak değere bölme, ImageNet ortalama/sapma) rembg ile aynı tutuldu; böylece Python'daki karşılaştırma ile uygulama aynı modeli aynı şekilde çalıştırıyor. |
 | YZ maske eşiği | 0,5 | Olasılık haritasının ortası; rembg'nin varsayılanı. |
@@ -191,7 +190,7 @@ Kullanıcıların telefonla çektiği gerçek fotoğraflarla sistematik bir öl�
 - **Fotoğraf cihazdan çıkmaz.** Uygulamada hiç ağ isteği yok. YZ modeli de uygulamanın içinde ve tarayıcıda çalışıyor; fotoğraf hiçbir sunucuya veya YZ hizmetine gönderilmiyor. (Testte doğrulandı: sayfa açılıp YZ çalıştırıldığında dışarıya tek istek gitmedi.)
 - Tarayıcıda yalnız ayarlar, özel ürün şablonları, artık parça kayıtları ve test notları saklanıyor (`localStorage`). Fotoğraf saklanmıyor.
 - Fotoğrafta el, yüz veya kişisel eşya görünürse bunlar da "malzeme" sanılabilir. YZ modeli "öne çıkan nesne" bulmak için eğitildiğinden özellikle insanları ve eşyaları nesne sayabilir. Kullanıcıya yalnız malzemeyi çekmesi önerilir.
-- **Güvenlik sınırı:** Uygulama yerleşimi ve geometriyi kontrol ediyor, **yük dayanımını hesaplamıyor**. Rapor bunu açıkça yazıyor. Kesimden önce ölçüyü bir numuneyle doğrulamak gerekiyor.
+- **Güvenlik sınırı:** Uygulama yerleşimi ve geometriyi kontrol ediyor, **yük dayanımını hesaplamıyor**. Kesimden önce ölçüyü bir numuneyle doğrulamak gerekiyor.
 
 ## 8. Sınırlılıklar
 
